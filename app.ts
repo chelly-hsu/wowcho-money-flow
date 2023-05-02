@@ -3,7 +3,7 @@ import cors from 'cors'
 import path from 'path';
 
 import { userRouter } from './routes/User.route'
-// import { moneyFlowRouter } from './routes/moneyFlow.route'
+import { moneyFlowRouter } from './routes/moneyFlow.route'
 // import { uploadRouter } from './routes/Upload.route'
 import { promisesRouter } from './routes/Promises.route'
 
@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/profile', userRouter)
 app.use('/proposal/promises', promisesRouter)
-// app.use('/money-flow', moneyFlowRouter)  //送出金流
+app.use('/money-flow', moneyFlowRouter)  //送出金流
 
 // 確認訂單進藍新金流 測試頁面
 app.set('view engine', 'ejs');
