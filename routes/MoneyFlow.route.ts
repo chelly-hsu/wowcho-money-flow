@@ -3,8 +3,8 @@ import { isAuth } from '../middlewares/auth';
 import { create_mpg_aes_decrypt } from '../middlewares/MoneyFlow.middleware';
 import { MoneyFlowController } from '../controllers/MoneyFlow.controller'
 import handleErrorAsync from "../services/handleErrorAsync"
-export const moneyFlowRouter = express.Router()
-
+const moneyFlowRouter = express.Router()
+export default moneyFlowRouter;
 
 // 確認訂單載入env
 moneyFlowRouter.get('/', handleErrorAsync(MoneyFlowController.get));
