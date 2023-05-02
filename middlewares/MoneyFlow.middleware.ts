@@ -1,10 +1,10 @@
 // import handleErrorAsync from "../services/handleErrorAsync"
 // import { appError } from '../services/appError'
 // import { Register } from '../models/Register.model'
-import * as crypto from 'crypto';
+import * as crypto from 'crypto'
 
-export const { MerchantID, HASHKEY, HASHIV, Version, Host } = process.env;
-export const RespondType = 'JSON';
+export const { MerchantID, HASHKEY, HASHIV, Version, Host } = process.env
+export const RespondType = 'JSON'
 
 // 字串組合
 export function genDataChain(order) {
