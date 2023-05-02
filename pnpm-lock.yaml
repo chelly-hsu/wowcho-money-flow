@@ -90,6 +90,9 @@ devDependencies:
   ts-node:
     specifier: ^10.9.1
     version: 10.9.1(@types/node@18.15.11)(typescript@5.0.4)
+  tslib:
+    specifier: ^2.5.0
+    version: 2.5.0
   typescript:
     specifier: ^5.0.4
     version: 5.0.4
