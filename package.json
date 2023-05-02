@@ -21,7 +21,7 @@
   "engines": {
     "npm": "8.x",
     "pnpm": "8.x",
-    "node": "16.x"
+    "node": ">=14 <15"
   },
   "bugs": {
     "url": "https://github.com/zhao1995chen/wowcho-api/issues"
