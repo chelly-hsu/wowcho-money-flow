@@ -3,7 +3,7 @@ import cors from 'cors'
 import path from 'path';
 
 import { userRouter } from './routes/User.route'
-import moneyFlowRouter from './routes/moneyFlow.route'
+import { moneyFlowRouter } from './routes/moneyFlow.route'
 import { uploadRouter } from './routes/Upload.route'
 import { promisesRouter } from './routes/Promises.route'
 

@@ -3,8 +3,7 @@ import { isAuth } from '../middlewares/auth';
 import { create_mpg_aes_decrypt } from '../middlewares/MoneyFlow.middleware';
 import { MoneyFlowController } from '../controllers/MoneyFlow.controller'
 import handleErrorAsync from "../services/handleErrorAsync"
-const moneyFlowRouter = express.Router()
-export default moneyFlowRouter;
+export const moneyFlowRouter = express.Router()
 
 // 確認訂單載入env
 moneyFlowRouter.get('/', handleErrorAsync(MoneyFlowController.get));
@@ -16,6 +15,6 @@ moneyFlowRouter.post('/newebpay-return', handleErrorAsync(MoneyFlowController.mp
 moneyFlowRouter.post('/newebpay-notify', handleErrorAsync(MoneyFlowController.mpgNotify))
 
 // moneyFlowRouter.post('/newebpay-notify', isAuth, handleErrorAsync(async (req, res, next) => {
-//     console.log('moneyFlowRouter newebpay-notify',req.body)
-//     await MoneyFlowController.mpgNotify(req, res, next);
-// }));
+    //     console.log('moneyFlowRouter newebpay-notify',req.body)
+    //     await MoneyFlowController.mpgNotify(req, res, next);
+    // }));
