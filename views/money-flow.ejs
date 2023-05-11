@@ -104,7 +104,16 @@
             console.log('Encode Error:', error.message);
           }
         }
-      }
+      },
+      async mounted() {
+        try {
+          const response = await axios.get(`${host}/money-flow`);
+          this.envVars = response.data;
+          console.log('envVars', this.envVars)
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+      },
     }
 
     createApp(app).mount('#app');
